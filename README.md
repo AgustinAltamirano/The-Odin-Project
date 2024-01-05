@@ -1,2 +1,2 @@
 # The-Odin-Project
-Repositorio de prácticas y proyectos del curso online The Odin Project
+Repositorio de prácticas del curso online The Odin Project
