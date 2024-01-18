@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto, sans-serif;
+}
+
+.dark_blue{
+    background-color: #1f2937;
+}
+
+.main_text_light{
+    color: #f9faf8;
+}
+
+.secondary_text_light{
+    color: #e5e7eb;
+}
+
+.std_padding{
+    padding-left: 240px;
+    padding-right: 240px;
+}
+
+.header{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header_links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+    font-size: 18px;
+}
+
+#container_1{
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+#container_1 .title{
+    font-size: 48px;
+    font-weight: bolder;
+    margin: 10px 0px;
+}
+
+#container_1 .subtext{
+    font-size: 18px;
+    margin: 0px;
+}
+
+#container_1 button{
+    height: 40px;
+    width: 150px;
+    padding: 0px;
+    margin-top: 15px;
+    background-color: #3882fe;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+#img_base1{
+    height: 300px;
+    width: auto;
+}
+
+a{
+    text-decoration: none;
+}
