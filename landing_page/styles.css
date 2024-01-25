@@ -11,6 +11,10 @@ body{
     background-color: #1f2937;
 }
 
+.light_gray{
+    background-color: #e5e7eb;
+}
+
 .main_text_light{
     color: #f9faf8;
 }
@@ -19,9 +23,18 @@ body{
     color: #e5e7eb;
 }
 
+.text_dark{
+    color: #1f2937
+}
+
 .std_padding{
     padding-left: 240px;
     padding-right: 240px;
+}
+
+.extra_padding{
+    padding-left: 350px;
+    padding-right: 350px;
 }
 
 .header{
@@ -50,7 +63,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 80px;
 }
 
 .content{
@@ -84,6 +97,72 @@ body{
 #img_base1{
     height: 300px;
     width: auto;
+}
+
+#container_2{
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container_2 .title{
+    font-size: 36px;
+    font-weight: bolder;
+    margin: 50px 0px;
+    text-align: center;
+}
+
+.images_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.small_image_container{
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0;
+}
+
+.images_container img{
+    height: 180px;
+    width: auto;
+    border: 5px solid #3882fe;
+    border-radius: 10%;
+}
+
+.img_text{
+    font-size: 18px;
+    text-align: center;
+}
+
+#container_3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote{
+    font-size: 36px;
+    font-style: italic;
+    min-width: 500px;
+    margin-top: 100px;
+    margin-bottom: 5px;
+}
+
+.quote_author{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
+    align-self: self-end;
+    margin-top: 5px;
+    margin-bottom: 100px;
 }
 
 a{
