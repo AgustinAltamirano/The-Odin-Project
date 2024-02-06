@@ -22,23 +22,14 @@ function addItem() {
   newItemLabel.textContent = newItem;
   inputNewItem.value = "";
   buttonDeleteItem.textContent = "Delete";
-  buttonDeleteItem.addEventListener("click", (event) => deleteItem(event));
+  buttonDeleteItem.addEventListener("click", function () {
+    shoppingList.removeChild(newListElement);
+  });
   inputNewItem.focus();
 
   newItemLabel.appendChild(buttonDeleteItem);
   newListElement.appendChild(newItemLabel);
   shoppingList.appendChild(newListElement);
-}
-
-function deleteItem(clickEvent) {
-  const buttonDeleteItem = clickEvent.target;
-  const itemLabel = buttonDeleteItem.parentNode;
-  const listElement = itemLabel.parentNode;
-  const shoppingList = listElement.parentNode;
-
-  itemLabel.removeChild(buttonDeleteItem);
-  listElement.removeChild(itemLabel);
-  shoppingList.removeChild(listElement);
 }
 
 main();
