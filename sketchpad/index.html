@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketchpad</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="header">
+    <h1 class="pageTitle">Sketchpad</h1>
+  </div>
+  <div class="content">
+    <div class="optionsNewSketchpad">
+      <label for="sizeSelector">
+        Select sketchpad size (between 2 - 100):
+      </label>
+      <input id="sizeSelector" type="number" min="2" max="100">
+      <span>
+        <input id="opacitySelector" type="checkbox">
+        <label for="opacitySelector">
+          Enable opacity effect
+        </label>
+      </span>
+      <button id="buttonNewSketchpad">New sketchpad</button>
+    </div>
+    <div class="sketchpad"></div>
+  </div>
+  <div class="footer">
+    <p>Made by 
+      <a href="https://github.com/AgustinAltamirano">Agustín Altamirano</a>
+    </p>
+  </div>
+</body>
+</html>
