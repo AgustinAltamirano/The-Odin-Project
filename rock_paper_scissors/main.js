@@ -16,7 +16,7 @@ function playRound(playerChoice, computerChoice){
         (playerChoice == PAPER && computerChoice == ROCK)){
         return 1; // Player wins
     }
-    return 0; // Computer wins
+    return -1; // Computer wins
 }
 
 function getResult(playerScore, computerScore){
