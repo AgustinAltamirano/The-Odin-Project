@@ -20,40 +20,62 @@ function playRound(playerChoice, computerChoice){
 }
 
 function getResult(playerScore, computerScore){
-    if (playerScore == computerScore) {
-        return "It's a tie!";
-    }
     if (playerScore > computerScore) {
         return "You win! Congratulations!";
     }
     return "Computer wins.";
 }
 
-function playGame(){
-    let playerScore = 0,
-        computerScore = 0;
-    console.log("Let's play!")
-    
-    for(let i = 0; i < 5; i++){
-        let playerChoice = prompt(`Choose ${ROCK}, ${PAPER} or ${SCISSORS}: `).toLowerCase();
-        let computerChoice = getComputerChoice();
-        
-        switch (playRound(playerChoice, computerChoice)) {
-            case 0:
-                console.log(`It's a tie! You both chose ${playerChoice}.`);
-                break;
-            case 1:
-                console.log(`You win! ${playerChoice} beats ${computerChoice}.`);
-                playerScore++;
-                break;
-            case -1:
-                console.log(`You lose... ${computerChoice} beats ${playerChoice}.`);
-                computerScore++;
-                break;
-        }
-        console.log(`Game score: [You] ${playerScore} - ${computerScore} [Computer].`);
-    }
+function main(){
+    let playerScore = 0;
+    let computerScore = 0;
+    let isGameOver = false;
 
-    console.log(`Game over. ${getResult(playerScore, computerScore)}`);
-    return;
+    const optionsImages = document.querySelectorAll("#optionsContainer img");
+    const roundResultDisplay = document.querySelector("#roundResult");
+    const scoreDisplay = document.querySelector("#score");
+    const gameResultDisplay = document.querySelector("#gameResult");
+    const buttonNewGame = document.querySelector("#buttonNewGame");
+
+    optionsImages.forEach(function (optionImage) {
+        optionImage.addEventListener("click", function (event) {
+            if (isGameOver){
+                return;
+            }
+            let playerChoice = event.target.title;
+            let computerChoice = getComputerChoice();
+
+            switch (playRound(playerChoice, computerChoice)) {
+                case 0:
+                    roundResultDisplay.textContent = `It's a tie! You both chose ${playerChoice}.`;
+                    break;
+                case 1:
+                    roundResultDisplay.textContent = `You win! ${playerChoice} beats ${computerChoice}.`;
+                    playerScore++;
+                    break;
+                case -1:
+                    roundResultDisplay.textContent = `You lose... ${computerChoice} beats ${playerChoice}.`;
+                    computerScore++;
+                    break;
+            }
+            scoreDisplay.textContent = `Score: [You] ${playerScore} - ${computerScore} [Computer]`;
+
+            if (playerScore < 5 && computerScore < 5) {
+                return;
+            }
+            isGameOver = true;
+            gameResultDisplay.textContent = `Game over: ${getResult(playerScore, computerScore)}`;
+        });
+    });
+
+    buttonNewGame.addEventListener("click", function () {
+        playerScore = 0;
+        computerScore = 0;
+        isGameOver = false;
+        roundResultDisplay.textContent = "";
+        scoreDisplay.textContent = `Score: [You] ${playerScore} - ${computerScore} [Computer]`;
+        gameResultDisplay.textContent = "";
+    });
 }
+
+main();
