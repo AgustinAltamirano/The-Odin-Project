@@ -35,6 +35,8 @@ body{
 }
 
 #optionsContainer{
+  margin: 0px 40px;
+  max-width: 800px;
   display: flex;
   justify-content: center;
   gap: 50px;
@@ -42,14 +44,15 @@ body{
 
 .optionContent{
   margin: 10px 0px;
+  min-width: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 img{
-  height: 200px;
-  width: auto;
+  width: 100%;
+  height: auto;
   border: 3px solid transparent;
   border-radius: 10%;
 }
@@ -92,6 +95,7 @@ img:hover{
 
 #footer p{
   color:rgb(240, 255, 217);
+  text-align: center;
 }
 
 a{
