@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+*{
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+#calculator{
+  padding: 10px;
+  background-color: rgb(34, 33, 83);
+  border-top: none;
+  border-left: none;
+  border-bottom: 6px solid rgb(19, 18, 46);
+  border-right: 6px solid rgb(19, 18, 46);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#display{
+  height: fit-content;
+  color: white;
+  margin: 10px;
+  padding: 10px 5px;
+  background-color: rgb(34, 39, 34);
+  border-top: 4px solid rgb(20, 20, 20);
+  border-left: 4px solid rgb(20, 20, 20);
+  border-bottom: 1px solid rgb(20, 20, 20);
+  border-right: 1px solid rgb(20, 20, 20);
+  border-radius: 10px;
+  font-size: 36px;
+  text-align: right;
+  align-self: stretch;
+  flex: 1;
+}
+
+#buttonContainer{
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+}
+
+.buttonColumn{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button{
+  width: 60px;
+  flex: 1 1 60px;
+  border-top: none;
+  border-left: none;
+  border-bottom: 2px solid rgb(103, 104, 101);
+  border-right: 2px solid rgb(103, 104, 101);
+  border-radius: 10px;
+  background-color: rgb(213, 214, 211);
+}
+
+#addButton{
+  flex: 2 1 130px;
+}
+
+.footer{
+  color: rgb(34, 39, 34);
+  background-color: rgb(213, 214, 211);
+  text-align: center;
+  flex: 0;
+}
+
+.footer a{
+  color: inherit;
+}
