@@ -64,7 +64,7 @@ body{
   gap: 10px;
 }
 
-button{
+#buttonContainer button{
   width: 60px;
   display: flex;
   justify-content: center;
@@ -79,14 +79,14 @@ button{
   border-radius: 10px;
 }
 
-button:active{
+#buttonContainer button:active{
   border-top: 2px solid rgb(26, 25, 62);
   border-left: 2px solid rgb(26, 25, 62);
   border-bottom: none;
   border-right: 2px none;
 }
 
-#addButton{
+#buttonContainer #addButton{
   flex: 2 1 130px;
 }
 
