@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
-
 *{
-  font-family: "Roboto", sans-serif;
+  font-family: monospace;
   font-weight: bold;
   font-size: 24px;
   box-sizing: border-box;
@@ -16,6 +14,7 @@ body{
 }
 
 .content{
+  background-color: rgb(217, 223, 255);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +45,7 @@ body{
   border-bottom: 1px solid rgb(20, 20, 20);
   border-right: 1px solid rgb(20, 20, 20);
   border-radius: 10px;
-  font-size: 36px;
+  font-size: 32px;
   text-align: right;
   align-self: stretch;
   flex: 1;
