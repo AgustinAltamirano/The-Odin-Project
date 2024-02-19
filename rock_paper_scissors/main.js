@@ -42,7 +42,7 @@ function main(){
             if (isGameOver){
                 return;
             }
-            let playerChoice = event.target.title;
+            let playerChoice = event.target.id;
             let computerChoice = getComputerChoice();
 
             switch (playRound(playerChoice, computerChoice)) {
